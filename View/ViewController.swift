@@ -13,7 +13,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     let mainQueue = DispatchQueue.main
     var endpoint = "https://api.github.com/users/sallen0400"
-    var nickName: String = " "
+    var urlNext = " "
+    
+    @IBOutlet weak var navigateItemsName: UINavigationItem!
+    var nickName: String = "sallen0400"
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var followersLabel: UILabel!
     @IBOutlet weak var biotext: UITextView!
@@ -47,6 +50,8 @@ class ViewController: UIViewController {
                         self.usernameLabel.text = git.name
                         self.loadPhoto(URLString: git.avatarUrl)
                         self.followersLabel.text = "\(git.followers) подписчиков"
+                        self.urlNext = self.endpoint
+                        self.navigateItemsName.title = git.name
                         var rep = 0
                         if git.publicRepos != 0 {
                             rep = git.publicRepos ?? 0
@@ -69,6 +74,17 @@ class ViewController: UIViewController {
             showAlert(message: "Такого пользователя нет")
         }
     }
+    
+    @IBAction func savePage(_ sender: UITapGestureRecognizer) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(withIdentifier: "repos")  as? SecondViewController
+        vc!.url = "https://api.github.com/users/\(nickName)/repos"
+        navigationController?.pushViewController(vc!, animated: true)
+        
+        
+    }
+    
     
     func loadPhoto(URLString: String)  {
         let url = URL(string: URLString)
@@ -108,6 +124,8 @@ class ViewController: UIViewController {
                         self.usernameLabel.text = git.name
                         self.loadPhoto(URLString: git.avatarUrl)
                         self.followersLabel.text = "\(git.followers) подписчиков"
+                        self.navigateItemsName.title = git.name
+                        self.urlNext = urlString
                         self.view.frame.origin.y = 0
                         var rep = 0
                         if git.publicRepos != 0 {

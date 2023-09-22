@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uWG-6e-Wcp">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--User-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BasicRequest" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,20 +17,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lYw-eS-ZLD">
-                                <rect key="frame" x="32" y="44" width="350" height="350"/>
+                                <rect key="frame" x="32" y="140" width="350" height="350"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="QYC-YC-V3V"/>
                                     <constraint firstAttribute="height" constant="350" id="Y1c-85-VFN"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ius-Z9-09D">
-                                <rect key="frame" x="20" y="402" width="374" height="24"/>
+                                <rect key="frame" x="20" y="498" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SLa-Vc-1l9">
-                                <rect key="frame" x="32" y="434" width="350" height="46"/>
+                                <rect key="frame" x="32" y="530" width="350" height="46"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="CFQ-Q4-vwK"/>
@@ -41,7 +41,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подписчики" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csW-QP-lFX">
-                                <rect key="frame" x="32" y="488" width="350" height="17"/>
+                                <rect key="frame" x="32" y="584" width="350" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="dHN-GB-bEw"/>
                                     <constraint firstAttribute="height" constant="17" id="rBN-wO-EGW"/>
@@ -74,8 +74,9 @@
                                     <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="arn-wf-fsB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество репозиториев" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vd4-w5-yNr">
-                                <rect key="frame" x="32" y="513" width="350" height="17"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество репозиториев" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vd4-w5-yNr">
+                                <rect key="frame" x="32" y="609" width="350" height="17"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="Tfw-vb-kUL"/>
                                     <constraint firstAttribute="height" constant="17" id="idJ-eZ-Rgs"/>
@@ -83,6 +84,9 @@
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Vt1-MI-1X4" appends="YES" id="Ms5-1Z-Uy2"/>
+                                </connections>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -104,33 +108,76 @@
                             <constraint firstItem="ius-Z9-09D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="x6Q-hp-ZWY"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="User" id="rrY-Dr-IYG">
+                        <barButtonItem key="backBarButtonItem" title="Профиль" id="RgD-fb-A4E"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="biotext" destination="SLa-Vc-1l9" id="RFN-of-jSh"/>
                         <outlet property="followersLabel" destination="csW-QP-lFX" id="1yN-Xf-jkQ"/>
                         <outlet property="imageView" destination="lYw-eS-ZLD" id="F1g-0q-duR"/>
+                        <outlet property="navigateItemsName" destination="rrY-Dr-IYG" id="QWU-4w-DdI"/>
                         <outlet property="reposLabel" destination="Vd4-w5-yNr" id="TWS-fV-w6P"/>
                         <outlet property="searchTextField" destination="43b-X0-tri" id="lpI-lK-e1Q"/>
                         <outlet property="usernameLabel" destination="ius-Z9-09D" id="ZKo-BN-U0f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Vt1-MI-1X4">
+                    <connections>
+                        <action selector="savePage:" destination="BYZ-38-t0r" id="g9w-vo-jYl"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-23.188405797101453" y="61.607142857142854"/>
+            <point key="canvasLocation" x="886.95652173913049" y="61.607142857142854"/>
         </scene>
-        <!--View Controller-->
+        <!--Репозитории-->
         <scene sceneID="Arq-Vf-tj8">
             <objects>
-                <viewController id="dqM-rm-7OW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="repos" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dqM-rm-7OW" customClass="SecondViewController" customModule="BasicRequest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oGo-QV-Cgh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Tbq-qt-Zad">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="CrG-wT-OaN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Репозитории" id="wgw-lc-ViM">
+                        <barButtonItem key="backBarButtonItem" title="Профиль" id="5hh-HQ-KNH"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="table" destination="Tbq-qt-Zad" id="3du-DO-Tvs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDY-Pj-kL9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="926" y="62"/>
+            <point key="canvasLocation" x="887" y="-644"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bTR-gM-bBx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uWG-6e-Wcp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="tgW-lY-msN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t6e-Q7-wwf">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="AfX-E1-Ubq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VMO-AV-gFo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3522" y="62"/>
         </scene>
     </scenes>
     <resources>

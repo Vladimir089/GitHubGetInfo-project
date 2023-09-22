@@ -14,6 +14,7 @@
 		E747BAEE2AA6281700C50202 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E747BAED2AA6281700C50202 /* Assets.xcassets */; };
 		E747BAF12AA6281700C50202 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E747BAEF2AA6281700C50202 /* LaunchScreen.storyboard */; };
 		E747BAFC2AB06FDC00C50202 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747BAFB2AB06FDC00C50202 /* APIManager.swift */; };
+		E747BB072ABC6C0400C50202 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747BB062ABC6C0400C50202 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E747BAF02AA6281700C50202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E747BAF22AA6281700C50202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E747BAFB2AB06FDC00C50202 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		E747BB062ABC6C0400C50202 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		E747BAD82AA6281300C50202 = {
 			isa = PBXGroup;
 			children = (
+				E747BB052ABC6B8400C50202 /* View */,
 				E747BAE32AA6281300C50202 /* BasicRequest */,
 				E747BAE22AA6281300C50202 /* Products */,
 			);
@@ -61,7 +64,6 @@
 				E747BAFA2AB06FC400C50202 /* API */,
 				E747BAE42AA6281300C50202 /* AppDelegate.swift */,
 				E747BAE62AA6281300C50202 /* SceneDelegate.swift */,
-				E747BAE82AA6281300C50202 /* ViewController.swift */,
 				E747BAEA2AA6281300C50202 /* Main.storyboard */,
 				E747BAED2AA6281700C50202 /* Assets.xcassets */,
 				E747BAEF2AA6281700C50202 /* LaunchScreen.storyboard */,
@@ -73,17 +75,9 @@
 		E747BAFA2AB06FC400C50202 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				E747BB012AB070F800C50202 /* models */,
 				E747BB022AB0710100C50202 /* services */,
 			);
 			path = API;
-			sourceTree = "<group>";
-		};
-		E747BB012AB070F800C50202 /* models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = models;
 			sourceTree = "<group>";
 		};
 		E747BB022AB0710100C50202 /* services */ = {
@@ -92,6 +86,15 @@
 				E747BAFB2AB06FDC00C50202 /* APIManager.swift */,
 			);
 			path = services;
+			sourceTree = "<group>";
+		};
+		E747BB052ABC6B8400C50202 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E747BAE82AA6281300C50202 /* ViewController.swift */,
+				E747BB062ABC6C0400C50202 /* SecondViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +171,7 @@
 				E747BAFC2AB06FDC00C50202 /* APIManager.swift in Sources */,
 				E747BAE92AA6281300C50202 /* ViewController.swift in Sources */,
 				E747BAE52AA6281300C50202 /* AppDelegate.swift in Sources */,
+				E747BB072ABC6C0400C50202 /* SecondViewController.swift in Sources */,
 				E747BAE72AA6281300C50202 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

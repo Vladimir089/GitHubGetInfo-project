@@ -15,3 +15,11 @@ struct GitHubUser: Codable {
     let followers: Int
     let publicRepos: Int?
 }
+
+
+struct GitRepos: Codable {
+    let name: String
+    let id: Int
+}
+
+
